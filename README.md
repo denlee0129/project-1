@@ -1,12 +1,69 @@
-# My First Python Project
+# Первый Python-проект
 
-This is my first Python project.
-It uses environment variables to manage application settings.
+## 1. Описание проекта
 
-## Installation
+Это мой первый Python-проект. Он демонстрирует работу с виртуальным окружением, установку зависимостей и загрузку настроек из файла `.env` с помощью библиотеки `python-dotenv`.
 
-Clone the repository:
+## 2. Установка проекта
+
+1. Склонируйте репозиторий:
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+2. Перейдите в папку проекта:
+```bash
+cd first-python-project
+```
+
+3. Создайте виртуальное окружение:
+```bash
+python -m venv .venv
+```
+
+4. Активируйте виртуальное окружение:
+```bash
+source .venv/bin/activate
+```
+
+5. Установите необходимые библиотеки:
+```bash
+pip install -r requirements.txt
+```
+
+## 3. Настройка .env
+
+Создайте файл `.env` на основе примера:
 
 ```bash
-git clone YOUR_GITHUB_URL
-cd project-1
+cp .env.example .env
+```
+
+Откройте `.env` и заполните переменные:
+
+- `APP_NAME` — название приложения.
+- `API_KEY` — секретный ключ.
+
+Файл `.env` не нужно загружать на GitHub, так как он содержит конфигурационные данные.
+
+## 4. Запуск проекта
+
+Для запуска программы выполните команду:
+
+```bash
+python main.py
+```
+
+## 5. Пример вывода
+
+После успешного запуска вы увидите:
+
+```text
+app_name: MyFirstProject
+API_KEY loaded: True
+```
+
+## 6. Используемые библиотеки
+
+- `python-dotenv` — для загрузки переменных из файла `.env`.
+- `requests` — для работы с HTTP-запросами.
